@@ -2,7 +2,7 @@
 
 My personal portfolio website showcasing my front-end development skills and projects.
 
-🌐 **Live Site**: [](https://eniolasulaiman.github.io/portfolio-site)
+🌐 [**Live Site**](https://eniolasulaiman.github.io/portfolio-site)
 
 ## About
 
