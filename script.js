@@ -219,7 +219,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 // TESTIMONIALS CAROUSEL
 // Auto-scroll + prev/next buttons + drag/swipe + dots
 // =====================
-(function () {
+/* (function () {
     const wrapper = document.getElementById('tWrapper');
     const track = document.getElementById('testimonialsTrack');
     const prevBtn = document.getElementById('tPrev');
@@ -368,7 +368,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     document.head.appendChild(scrollStyle);
 
     startAuto();
-})();
+})(); */
 
 // =====================
 // MARQUEE — drag/swipe to scroll manually, auto resumes after
