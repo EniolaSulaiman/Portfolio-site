@@ -1,6 +1,7 @@
 // =====================
 // CUSTOM CURSOR
 // =====================
+ 
 const cursor = document.getElementById('cursor');
 const ring = document.getElementById('cursor-ring');
 let mouseX = 0, mouseY = 0;
@@ -21,7 +22,7 @@ function animateRing() {
     requestAnimationFrame(animateRing);
 }
 animateRing();
-
+ 
 // =====================
 // NAV SCROLL
 // =====================
@@ -210,7 +211,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         const target = document.querySelector(a.getAttribute('href'));
         if (target) {
             e.preventDefault();
+            setTimeout(() => {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 50)
         }
     });
 });
