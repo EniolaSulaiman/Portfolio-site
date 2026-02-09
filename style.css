@@ -50,45 +50,9 @@
         font-family: var(--font-body);
         background-color: var(--cream);
         color: var(--text-primary);
-        cursor: none;
         overflow-x: hidden;
     }
 
-    /* ============================================
-       CUSTOM CURSOR
-    ============================================ */
-     #cursor {
-        position: fixed;
-        width: 12px;
-        height: 12px;
-        background: var(--terracotta);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 999999;
-        transform: translate(-50%, -50%);
-        transition: transform 0.1s ease, background 0.2s ease;
-        mix-blend-mode: normal;
-    }
-
-    #cursor-ring {
-        position: fixed;
-        width: 40px;
-        height: 40px;
-        border: 1.5px solid var(--terracotta);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9998;
-        transform: translate(-50%, -50%);
-        transition: all 0.18s ease;
-        opacity: 0.6;
-    }
-
-    body:has(a:hover) #cursor-ring,
-    body:has(button:hover) #cursor-ring {
-        transform: translate(-50%, -50%) scale(1.8);
-        opacity: 1;
-    }
- 
     /* ============================================
        NOISE TEXTURE OVERLAY
     ============================================ */
