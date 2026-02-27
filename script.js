@@ -135,7 +135,7 @@ const heroObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => {
         if (e.isIntersecting) {
             const values = e.target.querySelectorAll('.card-3d-value');
-            const data = [[30, '+'], [98, '%'], [4, '+']];
+            const data = [[10, '+'], [98, '%'], [3, '+']];
             values.forEach((v, i) => {
                 const num = v.querySelector('span');
                 const suffix = data[i][1];
