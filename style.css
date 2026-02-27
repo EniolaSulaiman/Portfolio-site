@@ -968,14 +968,9 @@
         min-height: 320px;
     }
 
-    .project-visual-inner {
-        font-family: var(--font-display);
-        font-size: 5rem;
-        font-weight: 900;
-        color: rgba(255, 255, 255, 0.15);
-        letter-spacing: -0.05em;
-        text-align: center;
-        padding: 2rem;
+    .project-visual img{
+        max-width: 100%;
+        border-radius: var(--radius-lg);
     }
 
     .project-visual-tag {
@@ -984,7 +979,7 @@
         left: 1.2rem;
         background: rgba(255, 255, 255, 0.12);
         backdrop-filter: blur(8px);
-        color: var(--cream);
+        color: var(--text-primary);
         font-family: var(--font-mono);
         font-size: 0.7rem;
         padding: 0.4rem 0.8rem;
