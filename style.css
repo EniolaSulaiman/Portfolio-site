@@ -708,8 +708,6 @@
         }
     }
 
-    .about-text {}
-
     .about-text p {
         font-size: 1.05rem;
         line-height: 1.8;
@@ -1344,18 +1342,18 @@
     }
 
     /* Drag cursor while dragging */
-    .testimonials-track-wrapper.dragging {
-        /* cursor: grabbing !important; */
-    }
+    /*.testimonials-track-wrapper.dragging {
+         cursor: grabbing !important; 
+    }*/
 
     .testimonials-track-wrapper.dragging * {
         pointer-events: none;
         user-select: none;
     }
 
-    .testimonials-track-wrapper {
-        /*cursor: grab; */
-    }
+    /*.testimonials-track-wrapper {
+        cursor: grab; 
+    }*/
 
     #contact {
         padding: 10rem 4rem;
