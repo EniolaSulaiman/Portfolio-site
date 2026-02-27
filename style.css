@@ -1345,7 +1345,7 @@
 
     /* Drag cursor while dragging */
     .testimonials-track-wrapper.dragging {
-        cursor: grabbing !important;
+        /* cursor: grabbing !important; */
     }
 
     .testimonials-track-wrapper.dragging * {
@@ -1354,7 +1354,7 @@
     }
 
     .testimonials-track-wrapper {
-        cursor: grab;
+        /*cursor: grab; */
     }
 
     #contact {
