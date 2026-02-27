@@ -477,21 +477,6 @@
         }
     }
 
-    .hero-scroll-hint {
-        position: absolute;
-        bottom: 2.5rem;
-        left: 4rem;
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-        font-family: var(--font-mono);
-        font-size: 0.75rem;
-        color: var(--text-light);
-        letter-spacing: 0.1em;
-        opacity: 0;
-        animation: fadeUp 1s ease 1.5s forwards;
-    }
-
     .scroll-line {
         width: 40px;
         height: 1px;
