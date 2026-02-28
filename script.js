@@ -23,6 +23,7 @@ function openMenu() {
     b0.style.transform = 'translateY(7px) rotate(45deg)';
     b1.style.opacity = '0';
     b2.style.transform = 'translateY(-7px) rotate(-45deg)';
+    document.getElementById(`navCloseBtn`).style.display = `block`;
 }
 
 function closeMenu() {
@@ -35,7 +36,9 @@ function closeMenu() {
     b0.style.transform = '';
     b1.style.opacity = '';
     b2.style.transform = '';
+    document.getElementById(`navCloseBtn`).style.display = `none`;
 }
+document.getElementById(`navCloseBtn`).addEventListener(`click`,closeMenu)
 
 hamburger.addEventListener('click', () => {
     navLinks.classList.contains('open') ? closeMenu() : openMenu();

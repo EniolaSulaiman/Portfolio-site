@@ -196,6 +196,27 @@
         border-radius: 2px;
     }
 
+        .nav-close {
+            display: none;
+            position: absolute;
+            top: 1.2rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--brown);
+            padding: 4px;
+            z-index: 100;
+        }
+    
+        @media (max-width: 900px) {
+    
+            .nav-links.open~.nav-close,
+            .nav-links.open+.nav-close {
+                display: block;
+            }
+        }
+
     /* ============================================
        HERO
     ============================================ */
