@@ -38,7 +38,7 @@ function closeMenu() {
     b2.style.transform = '';
     document.getElementById(`navCloseBtn`).style.display = `none`;
 }
-document.getElementById(`navCloseBtn`).addEventListener(`click`,closeMenu)
+document.getElementById(`navCloseBtn`).addEventListener(`click`, closeMenu)
 
 hamburger.addEventListener('click', () => {
     navLinks.classList.contains('open') ? closeMenu() : openMenu();
@@ -52,6 +52,29 @@ document.addEventListener('keydown', e => {
         closeMenu();
         hamburger.focus();
     }
+});
+
+// =====================
+// PROJECT FILTERS
+// =====================
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        projectCards.forEach(card => {
+            if (filter === 'all' || card.dataset.category === filter) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+    });
 });
 
 // =====================
@@ -190,7 +213,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         if (target) {
             e.preventDefault();
             setTimeout(() => {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 50)
         }
     });
