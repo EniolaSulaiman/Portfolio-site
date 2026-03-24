@@ -33,6 +33,6 @@ I'm Eniola Sulaiman, a 15-year-old front-end developer currently in SS3. I'm pas
 
 - **GitHub**: [@EniolaSulaoman](https://github.com/eniolasulaiman)
 - **Email**: eniolasulaiman.prodev@gmail.com
-- **Facebook**: [Eniola Sulaiman]()
+- **Facebook**: [Eniola Sulaiman](https://www.facebook.com/share/19uAfN1mr4/)
 - **Instagram**: [@ennyboss_dev](https://instagram.com/ennyboss_dev)
 
