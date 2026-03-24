@@ -22,17 +22,6 @@ I'm Eniola Sulaiman, a 15-year-old front-end developer currently in SS3. I'm pas
 - ♿ Semantic HTML for accessibility
 - 🎨 Modern UI with custom color scheme
 
-## Projects Showcased
-
-### Online Store
-A fully responsive e-commerce platform featuring dynamic product listings, shopping cart functionality, and an intuitive checkout process.
-
-### Travel Agency Website
-An interactive travel booking website showcasing destinations worldwide with galleries, booking forms, and smooth scrolling animations.
-
-### Restaurant Website
-A modern restaurant website with elegant menu display, online reservation system, and interactive location map.
-
 ## Color Palette
 
 - **Primary Accent**: Cyan (#00e5ff)
@@ -44,6 +33,6 @@ A modern restaurant website with elegant menu display, online reservation system
 
 - **GitHub**: [@EniolaSulaoman](https://github.com/eniolasulaiman)
 - **Email**: eniolasulaiman.prodev@gmail.com
-- **Facebook**: [Eniola Sulaiman](#)
-- **Instagram**: [@ennyboss_dev](#)
+- **Facebook**: [Eniola Sulaiman]()
+- **Instagram**: [@ennyboss_dev](https://instagram.com/ennyboss_dev)
 
