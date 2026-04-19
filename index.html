@@ -1,852 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO Meta Tags -->
-    <title>Eniola Sulaiman — Frontend Developer & Creative Builder</title>
-    <meta name="description"
-        content="Eniola Sulaiman is a mid-level frontend developer crafting beautiful, fast, and interactive web experiences for freelance clients worldwide. HTML, CSS & JavaScript specialist." />
-    <meta name="keywords"
-        content="frontend developer, freelance web developer, HTML CSS JavaScript, Eniola Sulaiman, web design, interactive websites" />
-    <meta name="author" content="Eniola Sulaiman" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Eniola Sulaiman — Frontend Developer" />
-    <meta property="og:description"
-        content="Crafting beautiful, fast, and interactive web experiences for ambitious clients." />
-    <meta property="og:url" content="https://eniolasulaiman.dev" />
-    <meta property="og:image" content="https://eniolasulaiman.dev/og-image.jpg" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Eniola Sulaiman — Frontend Developer" />
-    <meta name="twitter:description" content="Crafting beautiful, fast, and interactive web experiences." />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap"
-        rel="stylesheet" />
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eniola Sulaiman — Website Analytics Specialist</title>
+  <meta name="description" content="Eniola Sulaiman helps businesses track performance, optimize funnels, and increase conversions using data-driven insights." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://eniolasulaiman.dev" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Eniola Sulaiman — Website Analytics Specialist" />
+  <meta property="og:description" content="Turn website traffic into measurable growth." />
+  <meta property="og:url" content="https://eniolasulaiman.dev" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
-
 <body>
-    <!-- Nav overlay backdrop -->
-    <div class="nav-overlay" id="navOverlay"></div>
 
-    <!-- ============ NAV ============ -->
-    <nav id="nav" role="navigation" aria-label="Main navigation">
-        <a href="#hero" class="nav-logo" aria-label="Eniola Sulaiman home">ES<span>.</span></a>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Work</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#contact" class="nav-cta">Hire Me</a></li>
-        </ul>
-        <button class="hamburger" aria-label="Toggle menu" id="hamburgerBtn">
-            <span></span><span></span><span></span>
-        </button>
-        <button class="nav-close" aria-label="Close menu" id="navCloseBtn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
-        </button>
-    </nav>
+<!-- NAV OVERLAY -->
+<div class="nav-overlay" id="navOverlay"></div>
 
-    <!-- ============ HERO ============ -->
-    <header id="hero" role="banner">
-        <div class="hero-bg">
-            <div class="orb orb-1"></div>
-            <div class="orb orb-2"></div>
-            <div class="orb orb-3"></div>
-            <div class="hero-grid"></div>
-        </div>
+<!-- NAV -->
+<nav class="nav nav-dark" id="mainNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">ES<span class="dot">.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="funnels.html">Funnels</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary nav-cta">Book a Call</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <button class="nav-close" id="navCloseBtn" aria-label="Close menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
 
-        <div class="hero-content">
-            <div class="hero-eyebrow">Available for Freelance</div>
-            <h1 class="hero-title">
-                I Build <span class="italic">Websites</span><br>
-                That Actually<br>
-                <span class="outline">Convert.</span>
-            </h1>
-            <p class="hero-subtitle">
-                Hi, I'm Eniola — a frontend developer who turns ideas into fast, beautiful,
-                and memorable web experiences that help your business grow.
-            </p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn-primary">
-                    <span>See My Work</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                        <polyline points="12 5 19 12 12 19" />
-                    </svg>
-                </a>
-                <a href="#contact" class="btn-secondary">Let's Talk</a>
-            </div>
-        </div>
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="orb orb-blue" style="width:600px;height:600px;top:-100px;right:-100px;animation-delay:0s;"></div>
+    <div class="orb orb-purple" style="width:400px;height:400px;bottom:0;left:-50px;animation-delay:3s;"></div>
+  </div>
+  <div class="grid-bg hero-grid-overlay"></div>
 
-        <!-- Floating Stats Card -->
-        <aside class="hero-card-3d" aria-label="Developer statistics">
-            <div class="card-3d-inner" id="card3d">
-                <div class="card-3d-stat">
-                    <div class="card-3d-label">Projects Delivered</div>
-                    <div class="card-3d-value">10<span>+</span></div>
-                    <div class="card-3d-bar">
-                        <div class="card-3d-bar-fill" style="width:88%"></div>
-                    </div>
-                </div>
-                <div class="card-3d-stat">
-                    <div class="card-3d-label">Client Satisfaction</div>
-                    <div class="card-3d-value">98<span>%</span></div>
-                    <div class="card-3d-bar">
-                        <div class="card-3d-bar-fill" style="width:98%"></div>
-                    </div>
-                </div>
-                <div class="card-3d-stat">
-                    <div class="card-3d-label">Years Experience</div>
-                    <div class="card-3d-value">3<span>+ yrs</span></div>
-                    <div class="card-3d-bar">
-                        <div class="card-3d-bar-fill" style="width:60%"></div>
-                    </div>
-                </div>
-            </div>
-        </aside>
-    </header>
-
-    <!-- ============ MARQUEE ============ -->
-    <div class="marquee-strip" aria-hidden="true">
-        <div class="marquee-track" id="marqueeTrack">
-            <span class="marquee-item">HTML & CSS<span class="marquee-sep"><svg width="8" height="8" viewBox="0 0 8 8"
-                        fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">JavaScript<span class="marquee-sep"><svg width="8" height="8" viewBox="0 0 8 8"
-                        fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">Responsive Design<span class="marquee-sep"><svg width="8" height="8"
-                        viewBox="0 0 8 8" fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">Web Animations<span class="marquee-sep"><svg width="8" height="8"
-                        viewBox="0 0 8 8" fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">Performance<span class="marquee-sep"><svg width="8" height="8" viewBox="0 0 8 8"
-                        fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">Clean Code<span class="marquee-sep"><svg width="8" height="8" viewBox="0 0 8 8"
-                        fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">UI & UX<span class="marquee-sep"><svg width="8" height="8" viewBox="0 0 8 8"
-                        fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">SEO Friendly<span class="marquee-sep"><svg width="8" height="8" viewBox="0 0 8 8"
-                        fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">Fast Delivery<span class="marquee-sep"><svg width="8" height="8"
-                        viewBox="0 0 8 8" fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">HTML & CSS<span class="marquee-sep"><svg width="8" height="8" viewBox="0 0 8 8"
-                        fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">JavaScript<span class="marquee-sep"><svg width="8" height="8" viewBox="0 0 8 8"
-                        fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">Responsive Design<span class="marquee-sep"><svg width="8" height="8"
-                        viewBox="0 0 8 8" fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">Web Animations<span class="marquee-sep"><svg width="8" height="8"
-                        viewBox="0 0 8 8" fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">Performance<span class="marquee-sep"><svg width="8" height="8" viewBox="0 0 8 8"
-                        fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">Clean Code<span class="marquee-sep"><svg width="8" height="8" viewBox="0 0 8 8"
-                        fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">UI & UX<span class="marquee-sep"><svg width="8" height="8" viewBox="0 0 8 8"
-                        fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">SEO Friendly<span class="marquee-sep"><svg width="8" height="8" viewBox="0 0 8 8"
-                        fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-            <span class="marquee-item">Fast Delivery<span class="marquee-sep"><svg width="8" height="8"
-                        viewBox="0 0 8 8" fill="currentColor">
-                        <rect x="0" y="4" width="5.65" height="5.65" rx="0.5" transform="rotate(-45 0 4)" />
-                    </svg></span></span>
-        </div>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="badge badge-blue badge-pulse reveal">Available for New Projects</div>
+      <h1 class="display-xl reveal reveal-delay-1">
+        Turn Traffic Into<br>
+        <span class="grad-text">Measurable Growth</span>
+      </h1>
+      <p class="hero-sub reveal reveal-delay-2">
+        I help businesses track performance, optimize funnels, and increase conversions using data-driven insights — not guesswork.
+      </p>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="services.html" class="btn btn-primary">
+          View Services
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="funnels.html" class="btn btn-light">See Funnel Examples</a>
+      </div>
+      <div class="hero-tags reveal reveal-delay-4">
+        <span class="tag">Google Analytics</span>
+        <span class="tag">Google Tag Manager</span>
+        <span class="tag">Hotjar</span>
+        <span class="tag">Mixpanel</span>
+        <span class="tag">Funnel Optimization</span>
+      </div>
     </div>
 
-    <!-- ============ ABOUT ============ -->
-    <section id="about" aria-labelledby="about-heading">
-        <div class="about-grid">
-            <div class="about-visual reveal">
-                <div class="about-deco" aria-hidden="true"></div>
-                <div class="about-img-wrapper">
-                    <img src="assets/profile-picture.jpg" alt="My Profile Picture">
-                    <div class="about-avatar">
-                        <div class="avatar-shape" aria-label="Eniola Sulaiman initials">ES</div>
-                    </div>
-                </div>
-                <div class="about-img-badge">
-                    <div class="badge-num">3+</div>
-                    <div class="badge-text">Years of Craft</div>
-                </div>
-            </div>
-
-            <div class="about-text reveal reveal-delay-2">
-                <div class="section-label">About Me</div>
-                <h2 id="about-heading" class="section-title" style="margin-bottom: 1.8rem;">Crafting the Web,<br><span
-                        class="accent">One Pixel</span> at a Time</h2>
-                <p>
-                    I'm <strong>Eniola Sulaiman</strong>, a frontend developer with a sharp eye for design
-                    and a passion for building things that feel great to use. I work with
-                    <strong>HTML, CSS and JavaScript</strong> — the core tools of the web — and I use them well.
-                </p>
-                <p>
-                    I don't just write code. I think about <strong>your users, your brand, and your goals</strong>.
-                    Whether you need a landing page that converts, a portfolio that impresses,
-                    or a full website from scratch — I've got you.
-                </p>
-                <p>
-                    I work directly with <strong>business owners, creators, and entrepreneurs</strong>
-                    who want quality without the agency price tag. Let's build something great together.
-                </p>
-                <div class="skills-grid" role="list" aria-label="Technical skills">
-                    <div class="skill-tag" role="listitem">HTML5</div>
-                    <div class="skill-tag" role="listitem">CSS3</div>
-                    <div class="skill-tag" role="listitem">JavaScript</div>
-                    <div class="skill-tag" role="listitem">Responsive</div>
-                    <div class="skill-tag" role="listitem">Animations</div>
-                    <div class="skill-tag" role="listitem">Git</div>
-                    <div class="skill-tag" role="listitem">SEO</div>
-                    <div class="skill-tag" role="listitem">Performance</div>
-                </div>
-            </div>
+    <!-- Dashboard Visual -->
+    <div class="hero-visual reveal reveal-delay-2">
+      <div class="dashboard-card" data-parallax="0.8">
+        <div class="dc-header">
+          <span class="dc-title">Conversion Overview</span>
+          <span class="badge badge-green badge-pulse">Live</span>
         </div>
-    </section>
-
-    <!-- ============ SERVICES ============ -->
-    <section id="services" aria-labelledby="services-heading">
-        <div class="services-header reveal">
-            <div>
-                <div class="section-label">What I Offer</div>
-                <h2 id="services-heading" class="section-title">Services Built for <span class="accent">Real
-                        Results</span></h2>
-            </div>
-            <p class="services-desc">
-                Every service I offer is tailored to help your business look credible,
-                attract clients, and grow online — no fluff, no bloat.
-            </p>
+        <div class="dc-chart">
+          <svg viewBox="0 0 280 100" class="chart-svg">
+            <defs>
+              <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,80 C20,70 40,60 60,45 C80,30 100,55 120,40 C140,25 160,50 180,30 C200,10 220,35 240,20 C260,5 280,15 280,15 L280,100 L0,100 Z" fill="url(#chartGrad)"/>
+            <path d="M0,80 C20,70 40,60 60,45 C80,30 100,55 120,40 C140,25 160,50 180,30 C200,10 220,35 240,20 C260,5 280,15 280,15" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Data points -->
+            <circle cx="60" cy="45" r="3.5" fill="#3B82F6"/>
+            <circle cx="120" cy="40" r="3.5" fill="#3B82F6"/>
+            <circle cx="180" cy="30" r="3.5" fill="#3B82F6"/>
+            <circle cx="240" cy="20" r="3.5" fill="#3B82F6"/>
+          </svg>
         </div>
-
-        <div class="services-grid">
-            <article class="service-card reveal reveal-delay-1" tabindex="0">
-                <span class="service-num" aria-hidden="true">01</span>
-                <!-- Paintbrush / design icon -->
-                <span class="service-icon" aria-hidden="true">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 20h9" />
-                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
-                    </svg>
-                </span>
-                <h3 class="service-name">Custom Website Design</h3>
-                <p class="service-desc">Pixel-perfect, custom websites that reflect your brand and leave a lasting
-                    impression on every visitor.</p>
-            </article>
-            <article class="service-card reveal reveal-delay-2" tabindex="0">
-                <span class="service-num" aria-hidden="true">02</span>
-                <!-- Smartphone / responsive icon -->
-                <span class="service-icon" aria-hidden="true">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-                        <line x1="12" y1="18" x2="12.01" y2="18" />
-                    </svg>
-                </span>
-                <h3 class="service-name">Responsive Development</h3>
-                <p class="service-desc">Your site will look and perform flawlessly on every screen — phone, tablet, or
-                    desktop — no exceptions.</p>
-            </article>
-            <article class="service-card reveal reveal-delay-3" tabindex="0">
-                <span class="service-num" aria-hidden="true">03</span>
-                <!-- Zap / fast / landing page icon -->
-                <span class="service-icon" aria-hidden="true">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                    </svg>
-                </span>
-                <h3 class="service-name">Landing Pages</h3>
-                <p class="service-desc">High-converting landing pages built to turn visitors into leads. Persuasive copy
-                    layout, fast loading, and clear calls to action.</p>
-            </article>
-            <article class="service-card reveal reveal-delay-1" tabindex="0">
-                <span class="service-num" aria-hidden="true">04</span>
-                <!-- Search / SEO icon -->
-                <span class="service-icon" aria-hidden="true">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8" />
-                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                    </svg>
-                </span>
-                <h3 class="service-name">SEO & Performance</h3>
-                <p class="service-desc">Fast, semantic, and search-engine-friendly code that helps you get found on
-                    Google and rank higher than competitors.</p>
-            </article>
-            <article class="service-card reveal reveal-delay-2" tabindex="0">
-                <span class="service-num" aria-hidden="true">05</span>
-                <!-- Sparkle / animation icon -->
-                <span class="service-icon" aria-hidden="true">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
-                    </svg>
-                </span>
-                <h3 class="service-name">UI Animations & Interactions</h3>
-                <p class="service-desc">Smooth, purposeful animations and micro-interactions that delight users and make
-                    your site feel premium and alive.</p>
-            </article>
-            <article class="service-card reveal reveal-delay-3" tabindex="0">
-                <span class="service-num" aria-hidden="true">06</span>
-                <!-- Wrench / maintenance icon -->
-                <span class="service-icon" aria-hidden="true">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path
-                            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-                    </svg>
-                </span>
-                <h3 class="service-name">Website Maintenance</h3>
-                <p class="service-desc">Ongoing support, updates, bug fixes, and improvements so your site stays fresh,
-                    secure, and performing at its best.</p>
-            </article>
+        <div class="dc-metrics">
+          <div class="dc-metric">
+            <span class="dc-metric-val" data-target="4.7" data-suffix="%" data-decimals="1">0%</span>
+            <span class="dc-metric-label">Conv. Rate</span>
+            <span class="dc-metric-change up">+1.2%</span>
+          </div>
+          <div class="dc-metric">
+            <span class="dc-metric-val" data-target="2847" data-suffix="">0</span>
+            <span class="dc-metric-label">Sessions</span>
+            <span class="dc-metric-change up">+18%</span>
+          </div>
+          <div class="dc-metric">
+            <span class="dc-metric-val" data-target="34" data-suffix="%">0%</span>
+            <span class="dc-metric-label">Bounce Rate</span>
+            <span class="dc-metric-change down">-12%</span>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- ============ PROJECTS ============ -->
-    <section id="projects" aria-labelledby="projects-heading">
-        <div class="projects-header reveal">
-            <div>
-                <div class="section-label">Selected Work</div>
-                <h2 id="projects-heading" class="section-title">Projects That<br><span class="accent">Speak For
-                        Themselves</span></h2>
-            </div>
+      <!-- Floating chips -->
+      <div class="float-chip chip-1" data-parallax="1.2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        <span>+35% conversions</span>
+      </div>
+      <div class="float-chip chip-2" data-parallax="0.6">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Real-time tracking</span>
+      </div>
+      <div class="float-chip chip-3" data-parallax="1.5">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        <span>Funnel optimized</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll to explore</span>
+  </div>
+</section>
+
+<!-- ============ METRICS STRIP ============ -->
+<section class="metrics-strip">
+  <div class="container">
+    <div class="metrics-grid">
+      <div class="metric-item reveal">
+        <span class="metric-num" data-target="10" data-suffix="+">0+</span>
+        <span class="metric-desc">Projects Delivered</span>
+      </div>
+      <div class="metric-item reveal reveal-delay-1">
+        <span class="metric-num" data-target="35" data-suffix="%">0%</span>
+        <span class="metric-desc">Avg. Conversion Lift</span>
+      </div>
+      <div class="metric-item reveal reveal-delay-2">
+        <span class="metric-num" data-target="98" data-suffix="%">0%</span>
+        <span class="metric-desc">Client Satisfaction</span>
+      </div>
+      <div class="metric-item reveal reveal-delay-3">
+        <span class="metric-num" data-target="3" data-suffix="+ yrs">0</span>
+        <span class="metric-desc">Analytics Experience</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT I DO ============ -->
+<section class="section what-i-do">
+  <div class="container">
+    <div class="section-intro reveal">
+      <div class="label">What I Do</div>
+      <h2 class="display-lg">Data is only valuable<br>when it drives <span class="grad-text">action</span></h2>
+      <p class="section-sub">I bridge the gap between raw website data and real business results — setting up the right tracking, reading the signals, and making changes that actually move the needle.</p>
+    </div>
+    <div class="services-preview-grid">
+      <div class="sp-card reveal reveal-delay-1">
+        <div class="sp-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
         </div>
-
-        <div class="projects-filter">
-            <button class="filter-btn" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="digital-product">Digital Product</button>
-            <button class="filter-btn" data-filter="business">Business</button>
-            <button class="filter-btn" data-filter="personal-brand">Personal Brand</button>
+        <h3>Analytics Setup</h3>
+        <p>Proper GA4, Tag Manager, and event tracking so you actually know what's happening on your site.</p>
+        <a href="services.html" class="sp-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="sp-card reveal reveal-delay-2">
+        <div class="sp-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <div class="projects-grid">
-            <article class="project-card reveal" data-category="business">
-                <div class="project-visual"
-                    style="background: linear-gradient(135deg, #1a0d06 0%, #c4663a 50%, #d4a853 100%);">
-                    <img src="assets/tastebite-hero.png" alt="Tastebite restaurant hero section.">
-                    <div class="project-visual-tag">RESTAURANT</div>
-                    <div class="project-hover-overlay">
-                        <a class="project-view-btn" href="https://eniolasulaiman.github.io/Restaurant-website"
-                            target="_blank" rel="noopener noreferrer">View Project
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                <polyline points="15 3 21 3 21 9" />
-                                <line x1="10" y1="14" x2="21" y2="3" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <div class="project-tags">
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">SEO OPTIMIZED</span>
-                    </div>
-                    <h3 class="project-name">TasteBite Restaurant</h3>
-                    <p class="project-desc">A modern restaurant website with an elegant menu display and online
-                        reservation system. Designed with a focuson visual appeal and mobile-first responsiveness.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://eniolasulaiman.github.io/Restaurant-website" target="_blank"
-                            rel="noopener noreferrer" class="project-link"
-                            aria-label="Live site for TasteBite Restaurant">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                <polyline points="15 3 21 3 21 9" />
-                                <line x1="10" y1="14" x2="21" y2="3" />
-                            </svg>
-                            Live Site
-                        </a>
-                        <a href="https://github.com/eniolasulaiman/Restaurant-website" target="_blank"
-                            rel="noopener noreferrer" class="project-link" aria-label="GitHub repo for Brew & Co">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card reveal reveal-delay-1" data-category="digital-product">
-                <div class="project-visual"
-                    style="background: linear-gradient(135deg, #2C1A0E 0%, #7A5C44 100%);">
-                    <img src="assets/creator-os-hero.png" alt="Creator OS hero section.">
-                    <div class="project-visual-tag">NOTION</div>
-                    <div class="project-hover-overlay">
-                        <a class="project-view-btn" href="https://eniolasulaiman.github.io/creator-os" target="_blank"
-                            rel="noopener noreferrer">View Project
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                <polyline points="15 3 21 3 21 9" />
-                                <line x1="10" y1="14" x2="21" y2="3" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <div class="project-tags">
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JS</span>
-                        <span class="project-tag">SEO OPTIMIZED</span>
-                    </div>
-                    <h3 class="project-name">Creator OS</h3>
-                    <p class="project-desc">High-converting digital product sales page for a fictional Notion
-                        template
-                        bundle - built with HTML, CSS and JavaScript. No frameworks, no dependencies.</p>
-                    <div class="project-links">
-                        <a href="https://eniolasulaiman.github.io/creator-os" target="_blank" rel="noopener noreferrer"
-                            class="project-link">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                <polyline points="15 3 21 3 21 9" />
-                                <line x1="10" y1="14" x2="21" y2="3" />
-                            </svg>
-                            Live Site
-                        </a>
-                        <a href="https://github.com/eniolasulaiman/creator-os" target="_blank" rel="noopener noreferrer"
-                            class="project-link">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </article>
-            <article class="project-card reveal reveal-delay-1" data-category="digital-product">
-                <div class="project-visual"
-                    style="background: linear-gradient(135deg, #2C1A0E 0%, #7A5C44 100%);">
-                    <img src="assets/reply-flow-hero.png" alt="Reply Flow AI hero section.">
-                    <div class="project-visual-tag">Digital Product</div>
-                    <div class="project-hover-overlay">
-                        <a class="project-view-btn" href="https://eniolasulaiman.github.io/reply-flow-automation"
-                            target="_blank" rel="noopener noreferrer">View Project
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                <polyline points="15 3 21 3 21 9" />
-                                <line x1="10" y1="14" x2="21" y2="3" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <div class="project-tags">
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JS</span>
-                        <span class="project-tag">SEO OPTIMIZED</span>
-                    </div>
-                    <h3 class="project-name">Reply Flow AI Landing Page</h3>
-                    <p class="project-desc">A high-converting, SEO-optimized SaaS landing page for an AI customer
-                        support automation tool. Built with pure HTML, CSS and vanilla JavaScript - featuring
-                        animated
-                        SVG illustrations, responsive design, and a working price toggle.</p>
-                    <div class="project-links">
-                        <a href="https://eniolasulaiman.github.io/reply-flow-automation" target="_blank"
-                            rel="noopener noreferrer" class="project-link">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                <polyline points="15 3 21 3 21 9" />
-                                <line x1="10" y1="14" x2="21" y2="3" />
-                            </svg>
-                            Live Site
-                        </a>
-                        <a href="https://github.com/eniolasulaiman/reply-flow-automation" target="_blank"
-                            rel="noopener noreferrer" class="project-link">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </article>
-            <article class="project-card reveal reveal-delay-1" data-category="personal-brand">
-                <div class="project-visual"
-                    style="background: linear-gradient(135deg, #2C1A0E 0%, #7A5C44 100%);">
-                    <img src="assets/daniel-reyes-hero.png" alt="Daniel-Reyes Website hero section.">
-                    <div class="project-visual-tag">PERSONAL BRAND</div>
-                    <div class="project-hover-overlay">
-                        <a class="project-view-btn"
-                            href="https://eniolasulaiman.github.io/daniel-reyes-personal-brand-website" target="_blank"
-                            rel="noopener noreferrer">View Project
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                <polyline points="15 3 21 3 21 9" />
-                                <line x1="10" y1="14" x2="21" y2="3" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <div class="project-tags">
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JS</span>
-                        <span class="project-tag">SEO OPTIMIZED</span>
-                    </div>
-                    <h3 class="project-name">Daniel Reyes Personal Brand Website</h3>
-                    <p class="project-desc">Modern, minimal personal brand website for a fictional productivity
-                        coach -
-                        built with HTML, CSS and vanilla JS. Responsive, SEO-optimized, and deployed via GitHub
-                        pages.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://eniolasulaiman.github.io/daniel-reyes-personal-brand-website" target="_blank"
-                            rel="noopener noreferrer" class="project-link">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                <polyline points="15 3 21 3 21 9" />
-                                <line x1="10" y1="14" x2="21" y2="3" />
-                            </svg>
-                            Live Site
-                        </a>
-                        <a href="https://github.com/eniolasulaiman/daniel-reyes-personal-brand-website" target="_blank"
-                            rel="noopener noreferrer" class="project-link">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card reveal reveal-delay-2" data-category="business">
-                <div class="project-visual"
-                    style="background: linear-gradient(135deg, #4A2E1A 0%, #C4663A 80%, #E8D5B7 100%);">
-                    <img src="assets/shophub-hero.png" alt="Shophub hero section.">
-                    <div class="project-visual-tag">E-COMMERCE</div>
-                    <div class="project-hover-overlay">
-                        <a class="project-view-btn" href="https://eniolasulaiman.github.io/E-commerce-website"
-                            target="_blank" rel="noopener noreferrer">View Project
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                <polyline points="15 3 21 3 21 9" />
-                                <line x1="10" y1="14" x2="21" y2="3" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <div class="project-tags">
-                        <span class="project-tag">HTML</span>
-                        <span class="project-tag">CSS</span>
-                        <span class="project-tag">JS</span>
-                        <span class="project-tag">SEO OPTIMIZED</span>
-                    </div>
-                    <h3 class="project-name">ShopHub Online Store</h3>
-                    <p class="project-desc">A fully responsive e-commerce platform featuring dynamic product
-                        listings,
-                        shopping cart functionality, and
-                        an intuitive checkout process. Built with vanilla JavaScript to demonstrate core web
-                        development
-                        skills.</p>
-                    <div class="project-links">
-                        <a href="https://eniolasulaiman.github.io/E-commerce-website" target="_blank"
-                            rel="noopener noreferrer" class="project-link">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                <polyline points="15 3 21 3 21 9" />
-                                <line x1="10" y1="14" x2="21" y2="3" />
-                            </svg>
-                            Live Site
-                        </a>
-                        <a href="https://github.com/eniolasulaiman/E-commerce-website" target="_blank"
-                            rel="noopener noreferrer" class="project-link">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-            </article>
+        <h3>Funnel Optimization</h3>
+        <p>Identify where visitors drop off and fix the leaks — turning more of your existing traffic into customers.</p>
+        <a href="funnels.html" class="sp-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="sp-card reveal reveal-delay-3">
+        <div class="sp-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
-    </section>
-
-    <!-- ============ PROCESS ============ -->
-    <section id="process" aria-labelledby="process-heading">
-        <div class="process-header reveal">
-            <div class="section-label" style="justify-content: center;">How I Work</div>
-            <h2 id="process-heading" class="section-title">My <span class="accent">Simple</span> Process</h2>
+        <h3>Conversion Optimization</h3>
+        <p>Data-backed improvements to landing pages, CTAs, and user journeys that increase your conversion rate.</p>
+        <a href="services.html" class="sp-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="sp-card reveal reveal-delay-4">
+        <div class="sp-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </div>
-        <div class="process-steps">
-            <div class="process-line" aria-hidden="true"></div>
-            <div class="process-step reveal">
-                <div class="step-num-wrapper">
-                    <div class="step-num" aria-hidden="true">01</div>
-                </div>
-                <div class="step-content">
-                    <h3 class="step-title">First Communication</h3>
-                    <p class="step-desc">We communicate with you to understand your goals, audience, and timeline. I ask
-                        the right questions so I can build the right solution — not just a generic template.</p>
-                </div>
-            </div>
-            <div class="process-step reveal reveal-delay-1">
-                <div class="step-num-wrapper">
-                    <div class="step-num" aria-hidden="true">02</div>
-                </div>
-                <div class="step-content">
-                    <h3 class="step-title">Planning & Proposal</h3>
-                    <p class="step-desc">I put together a clear scope, timeline, and pricing. No surprises, no hidden
-                        fees. You know exactly what you're getting before we start.</p>
-                </div>
-            </div>
-            <div class="process-step reveal reveal-delay-2">
-                <div class="step-num-wrapper">
-                    <div class="step-num" aria-hidden="true">03</div>
-                </div>
-                <div class="step-content">
-                    <h3 class="step-title">Design & Build</h3>
-                    <p class="step-desc">I design and develop your site with regular check-ins. You'll see progress
-                        every step of the way, and your feedback shapes the final product.</p>
-                </div>
-            </div>
-            <div class="process-step reveal reveal-delay-3">
-                <div class="step-num-wrapper">
-                    <div class="step-num" aria-hidden="true">04</div>
-                </div>
-                <div class="step-content">
-                    <h3 class="step-title">Launch & Support</h3>
-                    <p class="step-desc">Once approved, I handle deployment and make sure everything is smooth. After
-                        launch, I'm still here if you need changes, updates, or anything new.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <h3>Analytics Audit</h3>
+        <p>Full review of your current tracking setup — what's broken, what's missing, and what to prioritise first.</p>
+        <a href="services.html" class="sp-link">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+    <div class="section-cta reveal">
+      <a href="services.html" class="btn btn-primary">See All Services</a>
+    </div>
+  </div>
+</section>
 
-    <!-- ============ TESTIMONIALS ============ -->
-    <section id="testimonials" aria-labelledby="testimonials-heading">
-        <div class="testimonials-header reveal">
-            <div>
-                <div class="section-label">What Clients Say</div>
-                <h2 id="testimonials-heading" class="section-title">Don't Take <span class="accent">My Word</span> For
-                    It</h2>
-            </div>
-            <div class="testimonials-nav" aria-label="Testimonial navigation">
-                <button class="t-nav-btn" id="tPrev" aria-label="Previous testimonial">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="15 18 9 12 15 6" />
-                    </svg>
-                </button>
-                <div class="t-nav-dots" id="tDots"></div>
-                <button class="t-nav-btn" id="tNext" aria-label="Next testimonial">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div class="testimonials-track-wrapper" id="tWrapper" aria-label="Client testimonials carousel">
-            <div class="testimonials-track" id="testimonialsTrack">
-                <!-- When implementing carousel again, duplicate cards -->
-                <div class="testimonial-card">
-                    <div class="stars" aria-label="5 out of 5 stars">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                    </div>
-                    <div class="testimonial-quote" aria-hidden="true">"</div>
-                    <p class="testimonial-text">I hired Eniola to revamp my landing page, and the results were amazing!
-                        My page looks better and performs even better. I'm getting a call per week without marketing.
-                        Highly recommend giving him a shot.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar" aria-hidden="true">OF</div>
-                        <div>
-                            <div class="author-name">Oluwatoni Faleye</div>
-                            <div class="author-role">Copywriter</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ============ FUNNEL PREVIEW ============ -->
+<section class="section funnel-preview">
+  <div class="container">
+    <div class="funnel-preview-inner">
+      <div class="funnel-preview-text reveal">
+        <div class="label label-light">Funnel Strategy</div>
+        <h2 class="display-lg" style="color:var(--white);">Every visitor has a<br><span class="grad-text">journey to take</span></h2>
+        <p style="color:rgba(255,255,255,0.65); font-size:1.05rem; line-height:1.7; margin: 1.5rem 0 2rem;">
+          Most websites lose visitors at predictable points. I map, measure, and optimise every step of the journey — from first click to final conversion.
+        </p>
+        <a href="funnels.html" class="btn btn-light">Explore Funnel Examples</a>
+      </div>
+      <div class="funnel-preview-visual reveal reveal-delay-2">
+        <!-- Funnel SVG -->
+        <svg class="funnel-svg" viewBox="0 0 320 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="f1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#60A5FA"/></linearGradient>
+            <linearGradient id="f2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#A78BFA"/></linearGradient>
+            <linearGradient id="f3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#8B5CF6"/></linearGradient>
+            <linearGradient id="f4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#34D399"/></linearGradient>
+          </defs>
+          <!-- Stage 1 - Awareness -->
+          <path d="M20,10 L300,10 L270,80 L50,80 Z" fill="url(#f1)" opacity="0.9"/>
+          <text x="160" y="50" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="white" font-weight="500">AWARENESS — 10,000</text>
+          <!-- Stage 2 - Interest -->
+          <path d="M50,90 L270,90 L245,160 L75,160 Z" fill="url(#f2)" opacity="0.85"/>
+          <text x="160" y="130" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="white" font-weight="500">INTEREST — 4,200</text>
+          <!-- Stage 3 - Consideration -->
+          <path d="M75,170 L245,170 L222,240 L98,240 Z" fill="url(#f3)" opacity="0.85"/>
+          <text x="160" y="210" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="white" font-weight="500">CONSIDERATION — 1,800</text>
+          <!-- Stage 4 - Conversion -->
+          <path d="M98,250 L222,250 L200,320 L120,320 Z" fill="url(#f1)" opacity="0.9"/>
+          <text x="160" y="290" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="white" font-weight="500">CONVERSION — 470</text>
+          <!-- Stage 5 - Loyalty -->
+          <path d="M120,330 L200,330 L185,390 L135,390 Z" fill="url(#f4)" opacity="0.95"/>
+          <text x="160" y="365" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="white" font-weight="500">LOYALTY — 200</text>
+          <!-- Drop-off indicators -->
+          <text x="308" y="50" text-anchor="start" font-family="DM Mono, monospace" font-size="9" fill="rgba(255,255,255,0.4)">100%</text>
+          <text x="276" y="130" text-anchor="start" font-family="DM Mono, monospace" font-size="9" fill="#EF4444">-58%</text>
+          <text x="252" y="210" text-anchor="start" font-family="DM Mono, monospace" font-size="9" fill="#EF4444">-57%</text>
+          <text x="228" y="290" text-anchor="start" font-family="DM Mono, monospace" font-size="9" fill="#EF4444">-74%</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- ============ CTA / CONTACT ============ -->
-    <section id="contact" aria-labelledby="contact-heading">
-        <div class="orb orb-1" aria-hidden="true"></div>
-        <div class="orb orb-2" aria-hidden="true"></div>
-        <div class="contact-inner">
-            <div class="section-label reveal">Ready to start?</div>
-            <h2 id="contact-heading" class="section-title reveal reveal-delay-1">Let's Build Something<br><span
-                    class="accent">Worth Sharing.</span></h2>
-            <p class="contact-subtitle reveal reveal-delay-2">
-                Have a project in mind? I'm open to new freelance projects.
-                Let's get on a call, talk about your vision, and make it real.
-            </p>
-            <div class="availability-badge reveal reveal-delay-2">
-                <span class="avail-dot"></span>
-                Available for new projects
-            </div>
-            <div class="contact-actions reveal reveal-delay-3">
-                <a href="mailto:eniolasulaiman.prodev@gmail.com" class="btn-light">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <rect x="2" y="4" width="20" height="16" rx="2" />
-                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                    </svg>
-                    Send Me an Email
-                </a>
-                <a href="https://instagram.com/ennyboss_dev" class="btn-outline-light" target="_blank"
-                    rel="noopener noreferrer">
-                    Instagram
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                        <polyline points="15 3 21 3 21 9" />
-                        <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61580552286705" class="btn-outline-light"
-                    target="_blank" rel="noopener noreferrer">
-                    Facebook
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                        <polyline points="15 3 21 3 21 9" />
-                        <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
-                </a>
-                <a href="https://github.com/eniolasulaiman" class="btn-outline-light" target="_blank"
-                    rel="noopener noreferrer">
-                    GitHub
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                        <polyline points="15 3 21 3 21 9" />
-                        <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
-                </a>
-            </div>
+<!-- ============ TESTIMONIAL ============ -->
+<section class="section testimonial-section">
+  <div class="container-narrow">
+    <div class="testimonial-card reveal">
+      <div class="tc-quote">"</div>
+      <p class="tc-text">I hired Eniola to revamp my landing page, and the results were amazing! My page looks better and performs even better. I'm getting a call per week without marketing. Highly recommend giving him a shot.</p>
+      <div class="tc-author">
+        <div class="tc-avatar">OF</div>
+        <div>
+          <div class="tc-name">Oluwatoni Faleye</div>
+          <div class="tc-role">Copywriter</div>
         </div>
-    </section>
+        <div class="tc-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- ============ FOOTER ============ -->
-    <footer>
-        <a href="#hero" class="footer-logo" aria-label="Back to top">ES<span>.</span></a>
-        <nav aria-label="Footer navigation">
-            <ul class="footer-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <p class="footer-copy">© 2026 Eniola Sulaiman. All rights reserved.</p>
-    </footer>
+<!-- ============ CTA STRIP ============ -->
+<section class="cta-strip">
+  <div class="container">
+    <div class="cta-strip-inner reveal">
+      <div>
+        <h2 class="display-md" style="color:var(--white);">Ready to grow with data?</h2>
+        <p style="color:rgba(255,255,255,0.6);margin-top:0.5rem;">Let's talk about your funnel, your tracking, and your goals.</p>
+      </div>
+      <a href="contact.html" class="btn btn-light">Book a Free Consultation</a>
+    </div>
+  </div>
+</section>
 
-    <script src="script.js"></script>
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Eniola Sulaiman",
-    "jobTitle": "Frontend Developer",
-    "description": "Mid-level frontend developer specializing in HTML, CSS, and JavaScript. Available for freelance web development projects.",
-    "url": "https://eniolasulaiman.dev",
-    "sameAs": [
-      "https://github.com/eniolasulaiman",
-      "https://instagram.com/ennyboss_dev",
-      "https://www.facebook.com/profile.php?id=61580552286705"
-    ],
-    "knowsAbout": ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Web Animation", "SEO"],
-    "offers": {
-      "@type": "Offer",
-      "description": "Freelance frontend web development services"
-    }
-  }
-  </script>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-brand-name">ES<span class="dot">.</span></div>
+      <p class="footer-tagline">Website Analytics Specialist & Conversion Optimization Expert</p>
+      <div class="footer-social">
+        <a href="https://github.com/eniolasulaiman" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://instagram.com/ennyboss_dev" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61580552286705" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Pages</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="funnels.html">Funnels</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Services</div>
+      <ul>
+        <li><a href="services.html">Analytics Setup</a></li>
+        <li><a href="services.html">Funnel Tracking</a></li>
+        <li><a href="services.html">CRO</a></li>
+        <li><a href="services.html">Analytics Audit</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Contact</div>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Book a Call</a></li>
+        <li><a href="mailto:eniolasulaiman.prodev@gmail.com">Send Email</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Eniola Sulaiman. All rights reserved.</span>
+    <span style="font-family:var(--font-mono); font-size:0.75rem;">Analytics · Funnels · Conversions</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
-
 </html>
