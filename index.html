@@ -11,9 +11,47 @@
   <meta property="og:title" content="Eniola Sulaiman — Website Analytics Specialist" />
   <meta property="og:description" content="Turn website traffic into measurable growth." />
   <meta property="og:url" content="https://eniolasulaiman.dev" />
+  <!-- FIX #3: OG image — replace [YOUR_OG_IMAGE_URL] with your 1200×630 branded image URL -->
+  <meta property="og:image" content="[YOUR_OG_IMAGE_URL]" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <!-- FIX #8: Preconnect to Google Fonts domains before the stylesheet loads.
+       This tells the browser to open the connections early, reducing render-blocking delay. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/home.css">
+  <!-- FIX #4: JSON-LD structured data — Person schema helps Google understand who you are
+       and can surface your site in "analytics specialist" searches.
+       Replace [YOUR_LINKEDIN_URL] with your LinkedIn profile URL once you have one. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Eniola Sulaiman",
+    "jobTitle": "Website Analytics Specialist",
+    "url": "https://eniolasulaiman.dev",
+    "email": "eniolasulaiman.prodev@gmail.com",
+    "description": "I help businesses track performance, optimize funnels, and increase conversions using data-driven insights.",
+    "sameAs": [
+      "https://github.com/eniolasulaiman",
+      "https://instagram.com/ennyboss_dev",
+      "https://www.facebook.com/profile.php?id=61580552286705"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Analytics & Conversion Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Analytics Setup" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Funnel Tracking & Optimization" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conversion Rate Optimization" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Analytics Audit" } }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -25,7 +63,7 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">ES<span class="dot">.</span></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="funnels.html">Funnels</a></li>
       <li><a href="case-studies.html">Case Studies</a></li>
@@ -43,7 +81,8 @@
 </nav>
 
 <!-- ============ HERO ============ -->
-<section class="hero" id="hero">
+<section class="hero scanlines" id="hero">
+  <div class="hero-rule"></div>
   <div class="hero-bg">
     <div class="orb orb-blue" style="width:600px;height:600px;top:-100px;right:-100px;animation-delay:0s;"></div>
     <div class="orb orb-purple" style="width:400px;height:400px;bottom:0;left:-50px;animation-delay:3s;"></div>
@@ -52,10 +91,10 @@
 
   <div class="container hero-inner">
     <div class="hero-content">
-      <div class="badge badge-blue badge-pulse reveal">Available for New Projects</div>
+      <div class="badge badge-amber badge-pulse reveal">Available for New Projects</div>
       <h1 class="display-xl reveal reveal-delay-1">
         Turn Traffic Into<br>
-        <span class="grad-text">Measurable Growth</span>
+        <span class="accent-text">Measurable Growth</span>
       </h1>
       <p class="hero-sub reveal reveal-delay-2">
         I help businesses track performance, optimize funnels, and increase conversions using data-driven insights — not guesswork.
@@ -87,17 +126,17 @@
           <svg viewBox="0 0 280 100" class="chart-svg">
             <defs>
               <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.3"/>
-                <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+                <stop offset="0%" stop-color="#E8A430" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#E8A430" stop-opacity="0"/>
               </linearGradient>
             </defs>
             <path d="M0,80 C20,70 40,60 60,45 C80,30 100,55 120,40 C140,25 160,50 180,30 C200,10 220,35 240,20 C260,5 280,15 280,15 L280,100 L0,100 Z" fill="url(#chartGrad)"/>
-            <path d="M0,80 C20,70 40,60 60,45 C80,30 100,55 120,40 C140,25 160,50 180,30 C200,10 220,35 240,20 C260,5 280,15 280,15" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M0,80 C20,70 40,60 60,45 C80,30 100,55 120,40 C140,25 160,50 180,30 C200,10 220,35 240,20 C260,5 280,15 280,15" fill="none" stroke="#E8A430" stroke-width="2.5" stroke-linecap="round"/>
             <!-- Data points -->
-            <circle cx="60" cy="45" r="3.5" fill="#3B82F6"/>
-            <circle cx="120" cy="40" r="3.5" fill="#3B82F6"/>
-            <circle cx="180" cy="30" r="3.5" fill="#3B82F6"/>
-            <circle cx="240" cy="20" r="3.5" fill="#3B82F6"/>
+            <circle cx="60" cy="45" r="3.5" fill="#E8A430"/>
+            <circle cx="120" cy="40" r="3.5" fill="#E8A430"/>
+            <circle cx="180" cy="30" r="3.5" fill="#E8A430"/>
+            <circle cx="240" cy="20" r="3.5" fill="#E8A430"/>
           </svg>
         </div>
         <div class="dc-metrics">
@@ -121,11 +160,11 @@
 
       <!-- Floating chips -->
       <div class="float-chip chip-1" data-parallax="1.2">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--signal-up)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
         <span>+35% conversions</span>
       </div>
       <div class="float-chip chip-2" data-parallax="0.6">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8A430" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         <span>Real-time tracking</span>
       </div>
       <div class="float-chip chip-3" data-parallax="1.5">
@@ -170,11 +209,15 @@
   <div class="container">
     <div class="section-intro reveal">
       <div class="label">What I Do</div>
-      <h2 class="display-lg">Data is only valuable<br>when it drives <span class="grad-text">action</span></h2>
+      <h2 class="display-lg">Data is only valuable<br>when it drives <span class="accent-text">action</span></h2>
       <p class="section-sub">I bridge the gap between raw website data and real business results — setting up the right tracking, reading the signals, and making changes that actually move the needle.</p>
     </div>
     <div class="services-preview-grid">
       <div class="sp-card reveal reveal-delay-1">
+        <div class="sp-num">01</div>
+        <div class="sp-num">02</div>
+        <div class="sp-num">03</div>
+        <div class="sp-num">04</div>
         <div class="sp-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
         </div>
@@ -219,7 +262,7 @@
     <div class="funnel-preview-inner">
       <div class="funnel-preview-text reveal">
         <div class="label label-light">Funnel Strategy</div>
-        <h2 class="display-lg" style="color:var(--white);">Every visitor has a<br><span class="grad-text">journey to take</span></h2>
+        <h2 class="display-lg" style="color:var(--white);">Every visitor has a<br><span class="accent-text">journey to take</span></h2>
         <p style="color:rgba(255,255,255,0.65); font-size:1.05rem; line-height:1.7; margin: 1.5rem 0 2rem;">
           Most websites lose visitors at predictable points. I map, measure, and optimise every step of the journey — from first click to final conversion.
         </p>
@@ -229,10 +272,10 @@
         <!-- Funnel SVG -->
         <svg class="funnel-svg" viewBox="0 0 320 400" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="f1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#60A5FA"/></linearGradient>
-            <linearGradient id="f2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#A78BFA"/></linearGradient>
-            <linearGradient id="f3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#8B5CF6"/></linearGradient>
-            <linearGradient id="f4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#34D399"/></linearGradient>
+            <linearGradient id="f1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#E8A430"/><stop offset="100%" stop-color="#C4891E"/></linearGradient>
+            <linearGradient id="f2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#8FAF9A"/><stop offset="100%" stop-color="#A5C8B4"/></linearGradient>
+            <linearGradient id="f3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#E8A430"/><stop offset="100%" stop-color="#8FAF9A"/></linearGradient>
+            <linearGradient id="f4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7EC8A0"/><stop offset="100%" stop-color="#5FBFA0"/></linearGradient>
           </defs>
           <!-- Stage 1 - Awareness -->
           <path d="M20,10 L300,10 L270,80 L50,80 Z" fill="url(#f1)" opacity="0.9"/>
@@ -285,7 +328,7 @@
 </section>
 
 <!-- ============ CTA STRIP ============ -->
-<section class="cta-strip">
+<section class="cta-strip scanlines">
   <div class="container">
     <div class="cta-strip-inner reveal">
       <div>

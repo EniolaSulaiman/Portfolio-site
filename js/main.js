@@ -19,23 +19,37 @@ const navClose   = document.getElementById('navCloseBtn');
 function openMenu() {
   if (!navLinks) return;
   navLinks.classList.add('open');
-  if (navOverlay) { navOverlay.style.display = 'block'; requestAnimationFrame(() => { navOverlay.style.opacity = '1'; }); }
+
+  // FIX #9: Use CSS class instead of inline style toggling
+  if (navOverlay) navOverlay.classList.add('overlay-visible');
+
   if (navClose) navClose.style.display = 'block';
   document.body.style.overflow = 'hidden';
   if (hamburger) hamburger.setAttribute('aria-expanded', 'true');
   const bars = hamburger?.querySelectorAll('span');
-  if (bars) { bars[0].style.transform = 'translateY(7px) rotate(45deg)'; bars[1].style.opacity = '0'; bars[2].style.transform = 'translateY(-7px) rotate(-45deg)'; }
+  if (bars) {
+    bars[0].style.transform = 'translateY(7px) rotate(45deg)';
+    bars[1].style.opacity = '0';
+    bars[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+  }
 }
 
 function closeMenu() {
   if (!navLinks) return;
   navLinks.classList.remove('open');
-  if (navOverlay) { navOverlay.style.opacity = '0'; setTimeout(() => { navOverlay.style.display = ''; }, 320); }
+
+  // FIX #9: Remove CSS class — transition handled entirely in CSS
+  if (navOverlay) navOverlay.classList.remove('overlay-visible');
+
   if (navClose) navClose.style.display = 'none';
   document.body.style.overflow = '';
   if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
   const bars = hamburger?.querySelectorAll('span');
-  if (bars) { bars[0].style.transform = ''; bars[1].style.opacity = ''; bars[2].style.transform = ''; }
+  if (bars) {
+    bars[0].style.transform = '';
+    bars[1].style.opacity = '';
+    bars[2].style.transform = '';
+  }
 }
 
 if (hamburger) hamburger.addEventListener('click', () => navLinks?.classList.contains('open') ? closeMenu() : openMenu());
@@ -46,10 +60,13 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu();
 
 // =====================
 // ACTIVE NAV LINK
+// FIX #10: Removed hardcoded class="active" from index.html — JS handles it
 // =====================
 (function() {
   const page = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(a => {
+    // First clear any hardcoded active classes to avoid duplicates
+    a.classList.remove('active');
     const href = a.getAttribute('href');
     if (href === page || (page === '' && href === 'index.html')) {
       a.classList.add('active');
@@ -110,8 +127,12 @@ document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe
 
 // =====================
 // FLOATING CARDS PARALLAX
+// FIX #7: Only runs if the user has NOT requested reduced motion
 // =====================
-if (window.matchMedia('(hover: hover) and (min-width: 901px)').matches) {
+if (
+  window.matchMedia('(prefers-reduced-motion: no-preference)').matches &&
+  window.matchMedia('(hover: hover) and (min-width: 901px)').matches
+) {
   document.addEventListener('mousemove', e => {
     const mx = (e.clientX / window.innerWidth - 0.5) * 2;
     const my = (e.clientY / window.innerHeight - 0.5) * 2;
@@ -119,5 +140,69 @@ if (window.matchMedia('(hover: hover) and (min-width: 901px)').matches) {
       const speed = parseFloat(el.dataset.parallax) || 1;
       el.style.transform = `translate(${mx * speed * 8}px, ${my * speed * 8}px)`;
     });
+  });
+}
+
+// =====================
+// CONTACT FORM — Formspree (FIX #1)
+// Replace YOUR_FORM_ID in contact.html with your actual Formspree form ID
+// =====================
+const contactForm = document.querySelector('.contact-form-card form');
+if (contactForm) {
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
+  const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault(); // Stop the default page-reload behaviour
+
+    // Show a loading state so the user knows something is happening
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 0.8s linear infinite;">
+          <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+        </svg>
+        Sending...
+      `;
+    }
+
+    // Remove any previous status messages
+    const existing = contactForm.querySelector('.form-status');
+    if (existing) existing.remove();
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        // Success — show confirmation and reset the form
+        contactForm.reset();
+        contactForm.insertAdjacentHTML('afterend', `
+          <div class="form-status form-status--success" role="alert">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Thanks! I'll be in touch within 24 hours.</span>
+          </div>
+        `);
+      } else {
+        throw new Error('Server responded with an error');
+      }
+    } catch (err) {
+      // Error — tell the user and suggest the email fallback
+      contactForm.insertAdjacentHTML('afterend', `
+        <div class="form-status form-status--error" role="alert">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span>Something went wrong. Please email me directly at <a href="mailto:eniolasulaiman.prodev@gmail.com">eniolasulaiman.prodev@gmail.com</a></span>
+        </div>
+      `);
+    } finally {
+      // Always restore the button so the user can try again
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+      }
+    }
   });
 }
