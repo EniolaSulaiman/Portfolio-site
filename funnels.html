@@ -19,6 +19,66 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/inner.css">
+  <link rel="stylesheet" href="css/home.css">
+  
+  <!-- FIX #4: JSON-LD Service schema — tells Google what specific services you offer,
+       which can help your services page rank for searches like "GA4 setup freelancer". -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Analytics & Conversion Services by Eniola Sulaiman",
+    "itemListElement": [
+      {
+        "@type": "ListItem", "position": 1,
+        "item": {
+          "@type": "Service",
+          "name": "Website Analytics Setup",
+          "description": "GA4, Google Tag Manager, and custom event tracking setup so you know exactly what's happening on your site.",
+          "provider": { "@type": "Person", "name": "Eniola Sulaiman", "url": "https://eniolasulaiman.dev" }
+        }
+      },
+      {
+        "@type": "ListItem", "position": 2,
+        "item": {
+          "@type": "Service",
+          "name": "Funnel Tracking & Optimization",
+          "description": "Identify where visitors drop off and fix the leaks — turning more of your existing traffic into customers.",
+          "provider": { "@type": "Person", "name": "Eniola Sulaiman", "url": "https://eniolasulaiman.dev" }
+        }
+      },
+      {
+        "@type": "ListItem", "position": 3,
+        "item": {
+          "@type": "Service",
+          "name": "Conversion Rate Optimization",
+          "description": "Data-backed improvements to landing pages, CTAs, and user journeys that increase your conversion rate.",
+          "provider": { "@type": "Person", "name": "Eniola Sulaiman", "url": "https://eniolasulaiman.dev" }
+        }
+      },
+      {
+        "@type": "ListItem", "position": 4,
+        "item": {
+          "@type": "Service",
+          "name": "Analytics Audit",
+          "description": "Full review of your current tracking setup — what's broken, what's missing, and what to prioritise first.",
+          "provider": { "@type": "Person", "name": "Eniola Sulaiman", "url": "https://eniolasulaiman.dev" }
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">ES<span class="dot">.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="funnels.html">Funnels</a></li>
       <li><a href="case-studies.html">Case Studies</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
