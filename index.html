@@ -23,6 +23,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/inner.css">
   <!-- FIX #4: JSON-LD structured data — Person schema helps Google understand who you are
        and can surface your site in "analytics specialist" searches.
        Replace [YOUR_LINKEDIN_URL] with your LinkedIn profile URL once you have one. -->
@@ -52,7 +53,7 @@
     }
   }
   </script>
-</head>
+<script>window.GA4_ID =`G-HR8712T900`</script> </head>
 <body>
 
 <!-- NAV OVERLAY -->
@@ -392,5 +393,23 @@
 </footer>
 
 <script src="js/main.js"></script>
+<div class="cookie-banner" id="cookieBanner" role="dialog"
+  aria-label="Cookie consent" aria-live="polite">
+  <div class="cookie-banner-inner">
+    <div class="cookie-text">
+      <span class="cookie-title">This site uses cookies</span>
+      <p>Google Analytics and the booking calendar use cookies to work.
+         You can accept or decline non-essential cookies.</p>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn btn-light cookie-decline" id="cookieDecline">
+        Decline
+      </button>
+      <button class="btn btn-primary cookie-accept" id="cookieAccept">
+        Accept cookies
+      </button>
+    </div>
+  </div>
+</div>
 </body>
 </html>

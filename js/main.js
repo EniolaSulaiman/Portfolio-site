@@ -206,3 +206,125 @@ if (contactForm) {
     }
   });
 }
+
+// =====================
+// CONSENT STORAGE KEY
+// =====================
+const CONSENT_KEY = 'es_cookie_consent'; // 'accepted' | 'declined'
+
+// =====================
+// LOAD GA4
+// Injected only after consent — never on page load
+// =====================
+function loadGA4() {
+  const id = window.GA4_ID;
+  if (!id || id === 'G-HR8712T900' || document.getElementById('ga4-script')) return;
+
+  // gtag script
+  const s = document.createElement('script');
+  s.id = 'ga4-script';
+  s.async = true;
+  s.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
+  document.head.appendChild(s);
+
+  // gtag init
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', id, { anonymize_ip: true });
+}
+
+// =====================
+// LOAD CALENDLY WIDGET
+// Only fires on contact.html when it finds the embed container
+// =====================
+function loadCalendly() {
+  const embed = document.getElementById('calendlyEmbed');
+  const gate = document.getElementById('calendlyGate');
+  if (!embed) return; // not on contact page
+
+  // Show the embed, hide the gate
+  embed.style.display = 'block';
+  if (gate) gate.style.display = 'none';
+
+  // Load Calendly's widget script once (idempotent)
+  if (!document.getElementById('calendly-script')) {
+    const s = document.createElement('script');
+    s.id = 'calendly-script';
+    s.src = 'https://assets.calendly.com/assets/external/widget.js';
+    s.async = true;
+    document.head.appendChild(s);
+  }
+}
+
+// =====================
+// APPLY CONSENT
+// Called both on page load (if already decided) and on button click
+// =====================
+function applyConsent(decision) {
+  if (decision === 'accepted') {
+    loadGA4();
+    loadCalendly();
+  }
+  // If declined: nothing loads. Gate message stays visible on contact page.
+}
+
+// =====================
+// COOKIE BANNER — show / hide / respond
+// =====================
+const cookieBanner = document.getElementById('cookieBanner');
+const acceptBtn = document.getElementById('cookieAccept');
+const declineBtn = document.getElementById('cookieDecline');
+
+function hideBanner() {
+  if (!cookieBanner) return;
+  cookieBanner.classList.remove('visible');
+  // Remove from DOM after transition so it doesn't block tab order
+  setTimeout(() => { cookieBanner.style.display = 'none'; }, 450);
+}
+
+function showBanner() {
+  if (!cookieBanner) return;
+  cookieBanner.style.display = '';
+  // Slight delay so the CSS transition fires (display:none → block needs a frame)
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => cookieBanner.classList.add('visible'));
+  });
+}
+
+// On accept
+if (acceptBtn) {
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem(CONSENT_KEY, 'accepted');
+    hideBanner();
+    applyConsent('accepted');
+  });
+}
+
+// On decline
+if (declineBtn) {
+  declineBtn.addEventListener('click', () => {
+    localStorage.setItem(CONSENT_KEY, 'declined');
+    hideBanner();
+    // No scripts load — gate message stays on contact page
+  });
+}
+
+// =====================
+// ON PAGE LOAD — check stored preference
+// =====================
+(function initConsent() {
+  const stored = localStorage.getItem(CONSENT_KEY);
+
+  if (stored === 'accepted') {
+    // Already consented — load everything silently, no banner
+    applyConsent('accepted');
+  } else if (stored === 'declined') {
+    // Already declined — no banner, no scripts
+  } else {
+    // First visit — show the banner after a short delay
+    // (avoids jarring flash on page load)
+    setTimeout(showBanner, 1200);
+  }
+})();
