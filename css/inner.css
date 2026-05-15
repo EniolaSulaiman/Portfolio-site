@@ -133,13 +133,15 @@
 .tools-section .label { color: var(--amber); }
 .tools-section .container { display: grid; }
 
-.tools-grid { display: grid; grid-template-columns: repeat(4, minmax(160px, 1fr)); gap: 1px; background: rgba(240,237,230,0.08); border: 1px solid rgba(240,237,230,0.08); justify-self: center;}
+.tools-grid { display: flex; flex-wrap: wrap; gap: 1px; background: rgba(240,237,230,0.08); border: 1px solid rgba(240,237,230,0.08); }
 
 .tool-card {
   background: var(--ink-mid);
   padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
+  flex: 1 1 160px;
+  max-width: 220px;
   align-items: center;
   gap: 0.75rem;
   transition: all 0.2s ease;
@@ -416,7 +418,6 @@
 }
 
 @media (max-width: 600px) {
-  .tools-grid{ grid-template-columns: repeat(2, minmax(160px, 1fr))};
   .cs-metrics-row { flex-wrap: wrap; gap: 1.5rem; }
   .cs-header, .cs-body, .cs-graph { padding-left: 1.5rem; padding-right: 1.5rem; }
   .form-row { grid-template-columns: 1fr; }
@@ -424,12 +425,6 @@
   .about-skills-grid { grid-template-columns: repeat(3, 1fr); }
   .contact-form-card { padding: 1.5rem; }
   .page-hero { padding: 7rem 1.5rem 4rem; }
-}
-
-@media (max-width: 400px) {
-  .tools-grid {
-      grid-template-columns: minmax(160px, 1fr);
-    }
 }
 
 .calendly-wrapper {
